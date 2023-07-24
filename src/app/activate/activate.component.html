@@ -1,0 +1,15 @@
+<div data-testid="activation-page">
+  <app-alert
+    *ngIf="activationStatus;else loading"
+    [text]="activationStatus === 'success' ?'Account is activated' : 'Activation failure'"
+  ></app-alert>
+
+  <ng-template #loading>
+    <span
+      class="spinner-border spinner-border-sm"
+      role="status"
+      data-testid="spinner"
+      aria-hidden="true"
+    ></span>
+  </ng-template>
+</div>

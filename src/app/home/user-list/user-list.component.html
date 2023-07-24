@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header text-center">
+    <h3>
+      Users
+    </h3>
+  </div>
+  <ul
+    *ngIf="page$ | async as page"
+    class="list-group list-group-flush"
+  >
+    <li
+      *ngFor="let user of page?.content"
+      class="list-group-item list-group-item-action"
+    >
+      {{user?.username}}
+    </li>
+  </ul>
+</div>

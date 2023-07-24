@@ -1,0 +1,13 @@
+<button
+  class="btn btn-primary"
+  type="submit"
+  [disabled]="disabled"
+>
+  <span
+    *ngIf="loading"
+    class="spinner-border spinner-border-sm"
+    role="status"
+    aria-hidden="true"
+  ></span>
+  <ng-content></ng-content>
+</button>
